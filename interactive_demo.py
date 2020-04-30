@@ -214,6 +214,10 @@ def sample(cfg, logger):
     test = transforms.ToPILImage()(helper)
     display(test)
     test.save("test.png", "PNG")
+    pls = Image.open("test.png")
+    display(pls)
+
+    '''
 
     #im = bimpy.Image(im)
     print("was")
@@ -231,6 +235,7 @@ def sample(cfg, logger):
     #display(Image(bild))
     print("help")
     print(bild)
+    '''
 
     display_original = True
 
