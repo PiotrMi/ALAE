@@ -202,7 +202,7 @@ def sample(cfg, logger):
             return resultsample.type(torch.uint8).transpose(0, 2).transpose(0, 1)
 
     
-    display_original = True
+    display_original = False
 
     import random
     #seed = 0
