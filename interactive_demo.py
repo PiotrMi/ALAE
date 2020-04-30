@@ -212,9 +212,11 @@ def sample(cfg, logger):
     print("was")
     bild = im
     print("au hurr")
-    Image(bild)
-    Image(im)
+    #Image(bild)
+    #Image(im)
     display(bild)
+    display(im)
+    display(Image(bild))
     print("help")
     print(bild)
 
