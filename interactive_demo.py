@@ -204,6 +204,7 @@ def sample(cfg, logger):
     im = update_image(latents, latents_original)
     print("what")
     print(im.shape)
+    print(im)
     print("test")
 
     from torchvision import transforms
