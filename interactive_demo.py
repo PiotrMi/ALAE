@@ -201,6 +201,15 @@ def sample(cfg, logger):
             resultsample = resultsample.cpu()[0, :, :, :]
             return resultsample.type(torch.uint8).transpose(0, 2).transpose(0, 1)
 
+    
+    display_original = True
+
+    import random
+    #seed = 0
+    seed = random.randint(0,9999)
+
+    torch.manual_seed(seed)
+    
     im_size = 2 ** (cfg.MODEL.LAYER_COUNT + 1)
     im = update_image(latents, latents_original)
     print("what")
@@ -236,13 +245,7 @@ def sample(cfg, logger):
     print(bild)
     '''
 
-    display_original = True
-
-    import random
-    #seed = 0
-    seed = random.randint(0,9999)
-
-    torch.manual_seed(seed)
+    
 
 '''
     while not ctx.should_close():
