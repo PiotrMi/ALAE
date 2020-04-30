@@ -211,6 +211,7 @@ def sample(cfg, logger):
     #im = bimpy.Image(im)
     print("was")
     bild = im
+    display(Image(im))
     print("au hurr")
     test = Image.fromarray(bild)
     test.save("test.png")
