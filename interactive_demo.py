@@ -181,7 +181,8 @@ def sample(cfg, logger):
 
         return latents, latents_original, img_src
 
-    latents, latents_original, img_src = loadNext()
+    #latents, latents_original, img_src = loadNext()
+    latents, latents_original, img_src = loadRandom()
 
     #ctx.init(1800, 1600, "Styles")
 
