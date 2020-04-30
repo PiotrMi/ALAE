@@ -181,7 +181,7 @@ def sample(cfg, logger):
 
     latents, latents_original, img_src = loadNext()
 
-    ctx.init(1800, 1600, "Styles")
+    #ctx.init(1800, 1600, "Styles")
 
     def update_image(w, latents_original):
         with torch.no_grad():
