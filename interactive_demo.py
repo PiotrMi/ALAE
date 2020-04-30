@@ -222,7 +222,7 @@ def sample(cfg, logger):
     from matplotlib.pyplot import imshow
     import numpy as np
 
-    %matplotlib inline
+    #%matplotlib inline
     print("jjdaoj")
 
     imshow(np.asarray(pls))
