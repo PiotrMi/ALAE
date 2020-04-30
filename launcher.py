@@ -120,6 +120,12 @@ def run(fn, defaults, description='', default_config='configs/experiment.yaml', 
     os.environ["OMP_NUM_THREADS"] = str(max(1, int(cpu_count / world_size)))
     del multiprocessing
 
+
+
+
+
+
+
     print("iceub")
     args = {}
 
