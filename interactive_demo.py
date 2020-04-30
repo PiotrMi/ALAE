@@ -216,6 +216,7 @@ def sample(cfg, logger):
     test.save("test.png", "PNG")
     pls = Image.open("test.png")
     display(pls)
+    pls.show()
 
     '''
 
