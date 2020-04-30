@@ -24,6 +24,7 @@ import lreq
 
 from PIL import Image
 import bimpy
+from IPython.display import display
 
 
 lreq.use_implicit_lreq.set(True)
@@ -201,9 +202,11 @@ def sample(cfg, logger):
 
     im_size = 2 ** (cfg.MODEL.LAYER_COUNT + 1)
     im = update_image(latents, latents_original)
+    print("what")
     print(im.shape)
+    print("test")
 
-    from IPython.display import display
+    
 
     im = bimpy.Image(im)
     bild = im
