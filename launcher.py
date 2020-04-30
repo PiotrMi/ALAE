@@ -120,7 +120,7 @@ def run(fn, defaults, description='', default_config='configs/experiment.yaml', 
     os.environ["OMP_NUM_THREADS"] = str(max(1, int(cpu_count / world_size)))
     del multiprocessing
 
-    args, unknown = parser.parse_known_args()
+    args, unknown = parser.parse_known_args(["fuck"])
 
     if world_size > 1:
         mp.spawn(_run,
