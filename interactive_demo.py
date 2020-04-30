@@ -23,7 +23,7 @@ from defaults import get_cfg_defaults
 import lreq
 
 from PIL import Image
-#import bimpy
+import bimpy
 
 
 lreq.use_implicit_lreq.set(True)
@@ -113,8 +113,8 @@ def sample(cfg, logger):
     paths.sort()
     paths_backup = paths[:]
     #randomize = bimpy.Bool(True)
-    #current_file = bimpy.String("")
-    current_file = ""
+    current_file = bimpy.String("")
+    #current_file = ""
 
     #ctx = bimpy.Context()
 
