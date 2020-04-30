@@ -238,7 +238,8 @@ def sample(cfg, logger):
 
     display_original = True
 
-    seed = 0
+    #seed = 0
+    seed = randint(0,9999)
 
 '''
     while not ctx.should_close():
