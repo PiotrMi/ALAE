@@ -112,12 +112,12 @@ def sample(cfg, logger):
     paths = list(os.listdir(path))
     paths.sort()
     paths_backup = paths[:]
-    randomize = bimpy.Bool(True)
-    current_file = bimpy.String("")
+    #randomize = bimpy.Bool(True)
+    #current_file = bimpy.String("")
 
-    ctx = bimpy.Context()
+    #ctx = bimpy.Context()
 
-    attribute_values = [bimpy.Float(0) for i in indices]
+    #attribute_values = [bimpy.Float(0) for i in indices]
 
     W = [torch.tensor(np.load("principal_directions/direction_%d.npy" % i), dtype=torch.float32) for i in indices]
 
@@ -201,7 +201,7 @@ def sample(cfg, logger):
     im_size = 2 ** (cfg.MODEL.LAYER_COUNT + 1)
     im = update_image(latents, latents_original)
     print(im.shape)
-    im = bimpy.Image(im)
+    #im = bimpy.Image(im)
 
     display_original = True
 
