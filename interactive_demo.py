@@ -208,6 +208,7 @@ def sample(cfg, logger):
     im = bimpy.Image(im)
     bild = im
     display(bild)
+    print(bild)
 
     display_original = True
 
