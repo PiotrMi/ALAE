@@ -114,6 +114,7 @@ def sample(cfg, logger):
     paths_backup = paths[:]
     #randomize = bimpy.Bool(True)
     #current_file = bimpy.String("")
+    current_file = ""
 
     #ctx = bimpy.Context()
 
