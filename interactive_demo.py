@@ -238,8 +238,11 @@ def sample(cfg, logger):
 
     display_original = True
 
+    import random
     #seed = 0
-    seed = randint(0,9999)
+    seed = random.randint(0,9999)
+
+    torch.manual_seed(seed)
 
 '''
     while not ctx.should_close():
