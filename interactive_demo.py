@@ -202,7 +202,12 @@ def sample(cfg, logger):
     im_size = 2 ** (cfg.MODEL.LAYER_COUNT + 1)
     im = update_image(latents, latents_original)
     print(im.shape)
-    #im = bimpy.Image(im)
+
+    from IPython.display import display
+
+    im = bimpy.Image(im)
+    bild = im
+    display(bild)
 
     display_original = True
 
