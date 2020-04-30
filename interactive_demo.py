@@ -208,7 +208,9 @@ def sample(cfg, logger):
     print("test")
 
     from torchvision import transforms
-    test = transforms.ToPILImage()(im).convert("RGB")
+    #test = transforms.ToPILImage()(im).convert("RGB")
+    holder = transforms.ToTensor()(im)
+    test = transforms.ToPILImage()(holder)
     display(test)
     test.save("test.png", "PNG")
 
