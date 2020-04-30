@@ -215,20 +215,6 @@ def sample(cfg, logger):
     test = transforms.ToPILImage()(helper)
     display(test)
     test.save("test.png", "PNG")
-    pls = Image.open("test.png")
-    display(pls)
-    pls.show()
-    
-
-    from matplotlib.pyplot import imshow
-    #import numpy as np
-
-    #%matplotlib inline
-    print("jjdaoj")
-
-    imshow(np.asarray(pls))
-
-    print("uhuwahd")
 
     '''
 
