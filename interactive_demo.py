@@ -209,8 +209,9 @@ def sample(cfg, logger):
 
     from torchvision import transforms
     #test = transforms.ToPILImage()(im).convert("RGB")
-    holder = transforms.ToTensor()(im)
-    test = transforms.ToPILImage()(holder)
+    helper = im.numpy()
+    #holder = transforms.ToTensor()(im)
+    test = transforms.ToPILImage()(helper)
     display(test)
     test.save("test.png", "PNG")
 
