@@ -112,13 +112,13 @@ def sample(cfg, logger):
     paths = list(os.listdir(path))
     paths.sort()
     paths_backup = paths[:]
-    #randomize = bimpy.Bool(True)
+    randomize = bimpy.Bool(True)
     current_file = bimpy.String("")
     #current_file = ""
 
     #ctx = bimpy.Context()
 
-    #attribute_values = [bimpy.Float(0) for i in indices]
+    attribute_values = [bimpy.Float(0) for i in indices]
 
     W = [torch.tensor(np.load("principal_directions/direction_%d.npy" % i), dtype=torch.float32) for i in indices]
 
