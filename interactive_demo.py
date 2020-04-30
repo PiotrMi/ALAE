@@ -212,11 +212,11 @@ def sample(cfg, logger):
     print("was")
     bild = im
     print("au hurr")
-    #Image(bild)
+    test = Image.fromarray(bild)
+    test.save("test.png")
     #Image(im)
 
-    import scipy.misc
-    scipy.misc.imsave('outfile.png', bild)
+    
 
     display(bild)
     display(im)
