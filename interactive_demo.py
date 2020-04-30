@@ -220,7 +220,7 @@ def sample(cfg, logger):
     
 
     from matplotlib.pyplot import imshow
-    import numpy as np
+    #import numpy as np
 
     #%matplotlib inline
     print("jjdaoj")
