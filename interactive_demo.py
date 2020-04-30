@@ -123,7 +123,13 @@ def sample(cfg, logger):
 
     W = [torch.tensor(np.load("principal_directions/direction_%d.npy" % i), dtype=torch.float32) for i in indices]
 
-    rnd = np.random.RandomState(5)
+    import random
+    #seed = 0
+    seed = random.randint(0,9999)
+
+    #torch.manual_seed(seed)
+
+    rnd = np.random.RandomState(seed)
 
     def loadNext():
         img = np.asarray(Image.open(path + '/' + paths[0]))
@@ -204,11 +210,7 @@ def sample(cfg, logger):
     
     display_original = False
 
-    import random
-    #seed = 0
-    seed = random.randint(0,9999)
-
-    torch.manual_seed(seed)
+    
     
     im_size = 2 ** (cfg.MODEL.LAYER_COUNT + 1)
     im = update_image(latents, latents_original)
