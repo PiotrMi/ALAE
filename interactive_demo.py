@@ -214,9 +214,13 @@ def sample(cfg, logger):
     print("au hurr")
     #Image(bild)
     #Image(im)
+
+    import scipy.misc
+    scipy.misc.imsave('outfile.png', bild)
+
     display(bild)
     display(im)
-    display(Image(bild))
+    #display(Image(bild))
     print("help")
     print(bild)
 
