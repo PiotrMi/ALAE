@@ -23,7 +23,7 @@ from defaults import get_cfg_defaults
 import lreq
 
 from PIL import Image
-import bimpy
+#import bimpy
 
 
 lreq.use_implicit_lreq.set(True)
@@ -207,6 +207,7 @@ def sample(cfg, logger):
 
     seed = 0
 
+'''
     while not ctx.should_close():
         with ctx:
             new_latents = latents + sum([v.value * w for v, w in zip(attribute_values, W)])
@@ -246,6 +247,8 @@ def sample(cfg, logger):
                 latents, latents_original, img_src = loadNext()
 
             bimpy.end()
+            
+'''
 
 
 if __name__ == "__main__":
