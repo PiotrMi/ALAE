@@ -100,31 +100,12 @@ def _run(rank, world_size, fn, defaults, write_log, no_cuda, args):
 
 
 def run(fn, defaults, description='', default_config='configs/experiment.yaml', world_size=1, write_log=True, no_cuda=False):
-    parser = argparse.ArgumentParser(description=description)
-    parser.add_argument(
-        "-c", "--config-file",
-        default=default_config,
-        metavar="FILE",
-        help="path to config file",
-        type=str,
-    )
-    parser.add_argument(
-        "opts",
-        help="Modify config options using the command-line",
-        default=None,
-        nargs=argparse.REMAINDER,
-    )
+    
 
     import multiprocessing
     cpu_count = multiprocessing.cpu_count()
     os.environ["OMP_NUM_THREADS"] = str(max(1, int(cpu_count / world_size)))
     del multiprocessing
-
-
-
-
-
-
 
     print("iceub")
     args = {}
