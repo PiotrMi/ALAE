@@ -206,7 +206,9 @@ def sample(cfg, logger):
     print(im.shape)
     print("test")
 
-    
+    from torchvision import transforms
+    test = transforms.ToPILImage()(im).convert("RGB")
+    display(test)
 
     #im = bimpy.Image(im)
     print("was")
