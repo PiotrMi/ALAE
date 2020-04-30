@@ -209,6 +209,7 @@ def sample(cfg, logger):
     from torchvision import transforms
     test = transforms.ToPILImage()(im).convert("RGB")
     display(test)
+    test.save("test.png", "PNG")
 
     #im = bimpy.Image(im)
     print("was")
