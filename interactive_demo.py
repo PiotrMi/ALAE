@@ -208,7 +208,8 @@ def sample(cfg, logger):
 
     
 
-    im = bimpy.Image(im)
+    #im = bimpy.Image(im)
+    print("was")
     bild = im
     print("au hurr")
     Image(bild)
